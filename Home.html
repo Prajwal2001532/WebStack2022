@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ERP Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<style>
+        * {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: 'Poppins', sans-serif;
+}
+.wrapper {
+	width: 1170px;
+	margin: auto;
+}
+header {
+	background: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.8)), url(Back.jpg);
+	height: 100vh;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+	position: relative;
+}
+.nav-area {
+	float: right;
+	list-style: none;
+	margin-top: 30px;
+}
+.nav-area li {
+	display: inline-block;
+}
+.nav-area li a {
+	color: #fff;
+	text-decoration: none;
+	padding: 5px 20px;
+	font-family: poppins;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+.nav-area li a:hover {
+	background: #fff;
+	color: #333;
+}
+.logo {
+	float: left;
+}
+.logo img {
+	width: 100%;
+	padding: 15px 0;
+}
+.welcome-text {
+	position: absolute;
+	width: 600px;
+	height: 300px;
+	margin: 20% 30%;
+	text-align: center;
+}
+.welcome-text h1 {
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 40px;
+}
+.welcome-text h1 span {
+	color: #00fecb;
+}
+.welcome-text a {
+	border: 1px solid #fff;
+	padding: 10px 25px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 14px;
+	margin-top: 20px;
+	display: inline-block;
+	color: #fff;
+}
+.welcome-text a:hover {
+	background: #fff;
+	color: #333;
+}
+/*resposive*/
+
+@media (max-width:600px) {
+	.wrapper {
+		width: 100%;
+	}
+	.logo {
+		float: left;
+		width: 20%;
+		text-align: center;
+		margin: auto;
+	}
+	img {
+		width: ;
+	}
+	.nav-area {
+		float: none;
+		margin-top: 0;
+	}
+	.nav-area li a {
+		padding: 5px;
+		font-size: 11px;
+	}
+	.nav-area {
+		text-align: center;
+	}
+	.welcome-text {
+		width: 90%;
+		height: auto;
+		margin: 30% 0;
+	}
+	.welcome-text h1 {
+		font-size: 30px;
+	}
+}
+.Btn{
+	display: inline-block;
+	color: #fff;
+	text-decoration: none;
+	padding: 5px 20px;
+	font-family: poppins;
+	font-size: 16px;
+	text-transform: uppercase;
+	background: #fff;
+	color: #333;
+}
+
+span.ps {
+    
+    padding-top: 16px;
+}
+.about{
+	background-color:black;
+	color:white;
+}
+.erp{
+	
+  width: 15%;
+  height: auto;
+  opacity: 10;
+
+
+}
+p{
+	align:center;
+}
+
+    </style> 
+</head>
+<body>
+    <header>
+    <div class="wrapper">
+        <div class="logo">
+           
+        </div>
+<ul class="nav-area">
+<li><a href="ulogin.html">Log in</a></li>
+<li><button onclick="document.getElementById('id01').style.display='block'" class="Btn">About</button></li>
+<li><a href="Admin/Admin Login.php">Admin</a></li>
+</ul>
+</div>
+<div class="welcome-text">
+        <h1>ERP for
+<span>Micro enterprise </span></h1>
+<a href="register.html">SignUP</a>
+    </div>  	
+</header>
+
+<div id="id01" class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="about">
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+        <h1>&nbsp;About ERP</h1></br>
+		&nbsp;<img src ="ERPpic.webp" class="erp"></br></br>
+		<p>&nbsp;ERP establishes venture asset arranging.
+          The fundamental idea is to guarantee that the assets valuable for the &nbsp; endeavor and to rattle off the vital ideas of the functionalities in them. Anticipating gathering reports to set up a marketing chart.</p> 
+		<h2> &nbsp;Billing Counter employees</h2>  
+		<img src = "./Admin/msg.png" alt= 'user' class="erp">
+		<p>&nbsp; The primary and essential task for them is to file a daily report in the form of bill for all the products that is used for billing from the inventory.&nbsp;
+			      and they would upload the report so the admin can see it. so this is so far the task. But all the employees get a interface where they have a counter id for any operation  i.e., updation and billing reports.</p>   
+        <h3>&nbsp;Admin</h3>
+		&nbsp;
+			<img src = "./Admin/Admin.jpg" alt= 'user' class="erp">	
+			<p>&nbsp; The Admin has multiple functionalities.which includes </p>			  
+			<p>&nbsp; 1)Managing Inventory:- which means that products can be added and removed upon his decision in the store. </p>
+			<p>&nbsp; 2)Managing Products availability :- The main plan for the store is to plan their resources before it everything goes away in the inventory. </p>
+			<p>&nbsp; 3)Manage employees :- The employee registered cannot be logged in without admin authority approval. </p>
+			<p>&nbsp; 4)View all reports :- There may be many reports that is filed on daily basis for the usage of inventory items based on their billing.</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>

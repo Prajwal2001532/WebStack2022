@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+    <head>
+        <title>Student Management system</title>
+        <script type="text/javascript">
+            function Reg()
+            {
+                document.getElementsByClassName('btn');
+                Window.alert("Uploaded Succesfully");
+            }
+        </script>
+    </head>
+    <style>
+        body{
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: black;
+
+        }
+        .container{
+            margin: auto;
+            display: inline-block;
+            background-color: white;
+            position:relative;
+            display: grid;
+            text-align:center;
+            width:50%;
+            
+        }
+        .outer{
+            margin: auto;
+            display: inline-block;
+            background-color: white;
+            
+            display: grid;
+           
+            width:50%;
+        }
+        .btn{
+            color:black;
+            width:50%;
+            position:relative;
+            text-align:center;
+            padding:10px;
+        }
+        input[type="text"],input[type="name"],input[type="number"],input[type="email"],input[type="password"],input[type="date"]{
+            display:inline-block;
+            padding:16px;
+            
+            margin:5px 0 22px 0;
+            width:30%; 
+        }
+    </style>
+    <body>
+        <div class="container">
+        <h1>Student Data</h1>
+        
+            <form>
+                <label>Name: </label><input type="text" name="Name" placeholder="Enter name" required /><br>
+                <label>Date of birth:</label><input type="date" name="Name" placeholder="Enter name" required /><br>
+                <label>Email: </label><input type="email" name="email" placeholder="Enter your email" required /><br>
+                <label>Password: </label><input type="password" name="password" placeholder="Enter your password" required /><br>
+                <label>Phone number: </label><input type="number" name="Phone.no" placeholder="Enter your phone number" required /><br>
+                <label>Address: </label><input type="text" name ="Address " placeholder="Enter your Address"required /><br>
+                <label>Qualification: </label><input type="text" name = "Qualification" placeholder="Enter your Qualification"required /><br>
+                <label>Father's name: </label><input type="text" name = "Father name" placeholder="Enter your Father's Name"required /><br>
+                <label>Contact Number: </label><input type="number" name="Phone.no" placeholder="Enter father's contact number" required /><br>
+                <label>Father's name: </label><input type="text" name = "Mother name" placeholder="Enter your Mother's Name"required /><br>
+                <label>Contact Number: </label><input type="number" name="Phone.no" placeholder="Enter Mother's contact number" required /><br>
+                <label>Age: </label><input type="text" name = "Age" placeholder ="Enter your Age"required /><br>
+
+                <div class="outer">
+                    <button type="submit" name="Upload" class="btn" onclick="Reg()">Upload</button>
+                    <p>Already uploaded!</p>
+                </div>
+
+            </form>
+        </div>
+    </body>
+</html>

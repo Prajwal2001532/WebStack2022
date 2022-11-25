@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="stu.xsl" type="text/xsl"?>
+<College  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="stu.xsd">
+    <student>
+        <SID>1</SID>
+        <Sname>Prajwal</Sname>
+        <Scourse>MCA</Scourse>
+        <Ssem>1</Ssem>
+        <sub1>100</sub1>
+        <sub2>100</sub2>
+        <sub3>100</sub3>
+        <Total>300</Total>
+        <Average>100</Average>
+    </student>
+    <student>
+        <SID>2</SID>
+        <Sname>Bhoomika</Sname>
+        <Scourse>Btech</Scourse>
+        <Ssem>6</Ssem>
+        <sub1>100</sub1>
+        <sub2>100</sub2>
+        <sub3>100</sub3>
+        <Total>289</Total>
+        <Average>80</Average>
+    </student>
+    <student>
+        <SID>3</SID>
+        <Sname>Raj</Sname>
+        <Scourse>BCA</Scourse>
+        <Ssem>5</Ssem>
+        <sub1>80</sub1>
+        <sub2>90</sub2>
+        <sub3>80</sub3>
+        <Total>278</Total>
+        <Average>93</Average>
+    </student>
+   
+</College>

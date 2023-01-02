@@ -68,5 +68,19 @@
         "P_Type": "Pant",
         "Quantity":"0",
        "Price":"1970"
+    },
+    {
+        "PID": "011",
+       "Product_Name": "Denim Leather power Hoodie",
+       "P_Type": "Hoodie",
+       "Quantity":"1",
+       "Price":"2400"
+    },
+    {
+        "PID": "012",
+       "Product_Name": "Kalyan white saree",
+       "P_Type": "Cotton Saree",
+       "Quantity":"1",
+       "Price":"3400"
     }
 ]

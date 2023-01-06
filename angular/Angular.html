@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+       
+       .form-wrapper {
+  background-color: seashell;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#eae8e8));
+  background-image: -webkit-linear-gradient(top, #f6f6f6, #eae8e8);
+  background-image: -moz-linear-gradient(top, #f6f6f6, #eae8e8);
+  background-image: -ms-linear-gradient(top, #f6f6f6, #eae8e8);
+  background-image: -o-linear-gradient(top, #f6f6f6, #eae8e8);
+  background-image: linear-gradient(top, #f6f6f6, #eae8e8);
+  border-color: #dedede #bababa #aaa #bababa;
+  border-style: solid;
+  border-width: 1px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 3px 3px rgba(255,255,255,.1), 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 5px #444;
+  -moz-box-shadow: 0 3px 3px rgba(255,255,255,.1), 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 5px #444;
+  box-shadow: 0 3px 3px rgba(255,255,255,.1), 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 5px #444;
+  margin: 100px auto;
+  overflow: hidden;
+  padding: 8px;
+  width: 450px;
+  position:absolute;
+  padding: left 0;
+  margin: top 12px; ;
+}
+
+.form-wrapper #search {
+  border: 1px solid #CCC;
+  -webkit-box-shadow: 0 1px 1px #ddd inset, 0 1px 0 #FFF;
+  -moz-box-shadow: 0 1px 1px #ddd inset, 0 1px 0 #FFF;
+  box-shadow: 0 1px 1px #ddd inset, 0 1px 0 #FFF;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  color: #999;
+  float: left;
+  
+  height: 20px;
+  padding: 10px;
+  width: 320px;
+}
+
+.form-wrapper #search:focus {
+  border-color: antiquewhite;
+  -webkit-box-shadow: 0 1px 1px #bbb inset;
+  -moz-box-shadow: 0 1px 1px #bbb inset;
+  box-shadow: 0 1px 1px #bbb inset;
+  outline: 0;
+}
+
+.form-wrapper #search:-moz-placeholder,
+.form-wrapper #search:-ms-input-placeholder,
+.form-wrapper #search::-webkit-input-placeholder {
+  color: #999;
+  font-weight: normal;
+}
+.row{
+    font: 15px Arial, Helvetica;
+}
+.fix{
+  position: relative;
+   top: -16px;
+   right: -870px;
+   
+}
+
+.form-wrapper #submit {
+  background-color: #0483a0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#31b2c3), to(#0483a0));
+  background-image: -webkit-linear-gradient(top, #31b2c3, #0483a0);
+  background-image: -moz-linear-gradient(top, #31b2c3, #0483a0);
+  background-image: -ms-linear-gradient(top, #31b2c3, #0483a0);
+  background-image: -o-linear-gradient(top, #31b2c3, #0483a0);
+  background-image: linear-gradient(top, #31b2c3, #0483a0);
+  border: 1px solid #00748f;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 0 #FFF;
+  -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 0 #FFF;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 0 #FFF;
+  color: #fafafa;
+  cursor: pointer;
+  height: 42px;
+  float: right;
+  font: 15px Arial, Helvetica;
+  padding: 0;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 rgba(0, 0 ,0, .3);
+  width: 100px;
+}
+
+.form-wrapper #submit:hover,
+.form-wrapper #submit:focus {
+  background-color: #31b2c3;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#0483a0), to(#31b2c3));
+  background-image: -webkit-linear-gradient(top, #0483a0, #31b2c3);
+  background-image: -moz-linear-gradient(top, #0483a0, #31b2c3);
+  background-image: -ms-linear-gradient(top, #0483a0, #31b2c3);
+  background-image: -o-linear-gradient(top, #0483a0, #31b2c3);
+  background-image: linear-gradient(top, #0483a0, #31b2c3);
+}
+
+.form-wrapper #submit:active {
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5) inset;
+  outline: 0;
+}
+
+.form-wrapper #submit::-moz-focus-inner {
+  border: 0;
+}
+
+        body {font: 20px Arial, Helvetica;
+               background-image: url('backitem.jpg'); 
+               background-repeat: no-repeat;
+               background-size: cover;
+        }
+        img{
+            width: 50px;
+        }
+                .style {
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.9em;
+            font-family: sans-serif;
+            min-width: 400px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+                }
+                .style thead tr {
+            background-color: #0483a0;
+            color: #ffffff;
+            text-align: left;
+        }
+                
+        .style th,
+        .style td {
+            padding: 12px 15px;
+        }
+
+        .style tbody tr {
+            border-bottom: 1px solid #dddddd;
+        }
+
+        .style tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+
+        
+        .style tbody tr.active-row {
+            font-weight: bold;
+            color:peru;
+        }
+
+   .fixed-header, .fixed-footer{
+        width: 100%;
+        position: fixed;        
+        background:  #111;
+        padding: 10px 0;
+        color: #fff;
+        text-align: center;
+    }
+    .fixed-header{
+        top: 0;
+    }
+    .fixed-footer{
+      position: flex;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #111;
+  color: white;
+  text-align: center;
+    }
+    
+    
+.sidenav {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+.main{
+    margin-left: 160px; /* Same as the width of the sidenav */
+    padding: 0px 10px;
+}
+
+
+    </style>
+</head>
+<body>
+    
+    
+    <div class="sidenav">
+        <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo" id="nav-logo"></a> 
+        <a href="index.html">Home</a>
+        <a href="signup.html">Sign In</a>
+        <a href="">Logout</a>
+        <a href="cook2.html">Cookie</a>
+      </div>
+    <div ng-app="myApp" 
+        ng-controller="myController" class="main">
+
+       <h2>Inventory</h2>
+       <div class="row">
+        <form class="form-wrapper">
+        <div class="col-md-2">
+          Search by name:
+        </div>
+        <div class="col-md-10">
+          <input type="text" class="search" data-ng-model="Search.Product_Name" size="40" placeholder="Search for your Products" />
+          
+        </div>
+        <br>
+        <div class="col-md-5">
+            Search by Type:
+          </div>
+          <div class="col-md-11">
+            <input type="text" class="search" data-ng-model="Search.P_Type" size="40" placeholder="Search for your Products" />
+            
+          </div>
+          <br>
+          <div class="col-md-6">
+            Search by Quantity:
+          </div>
+          <div class="col-md-10">
+            <input type="text" class="search" data-ng-model="Search.Quantity" size="40" placeholder="Search for your Products" />
+            
+          </div> 
+          
+          <br>
+          <div class="col-md-6">
+            Search by Price:
+          </div>
+          <div class="col-md-0">
+            <input type="text" class="search" data-ng-model="Search.Price" size="40" placeholder="Search for your Products" />
+            
+          </div> 
+         </form>  
+      </div>
+      <div class="fix">
+        <table class="style">
+          <thead>
+            <tr>
+                <th>PID</th>
+                    <th >Product_Name</th>
+                    <th>Product_Type</th>
+                    <th>Quantity</th>
+                    <th>Price(In ₹)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="Product in list | filter:Search | orderBy:'Product_Name'">
+                <td>{{Product.PID}}</td>
+                    <td>{{Product.Product_Name}}</td>
+                        <td>{{Product.P_Type}}</td>
+                        <td>{{Product.Quantity | Quantity}}</td>
+                        <td>{{Product.Price}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+        <br>
+        
+        
+
+      </div>
+
+    </hr>
+    <div class="fixed-footer">
+        <div class="container">Copyright &copy; 2019 Webelop</div>        
+    </div>
+</body>
+
+<!--The Controller-->
+<script>
+    var app = angular.module('myApp', [])
+             .filter("Quantity",function(){
+                return function (Quantity){
+                      if(Quantity == 1){
+                              return "Available";
+                      }
+                      else{        
+                              return "Unavailable";
+                      }
+                    
+                   }
+             });
+    app.controller('myController',
+        function ($scope, $http) {
+
+            var request = {
+                method: 'get',
+                url: 'https://prajwal2001532.github.io/WebStack2022/Product.json',
+                dataType: 'json',
+                contentType: "application/json"
+            };
+
+            $scope.arrBirds = new Array;
+            $scope.arrBirds=[],
+            $scope.currentPage = 1,
+            $scope.numPerPage = 3,
+            $scope.maxSize = 4;
+
+            $scope.orderByMe = function(Product) {  
+        $scope.myOrderBy = Product;
+            }
+  
+  
+
+            $http(request)
+                .success(function (jsonData) {
+                    $scope.arrBirds = jsonData;
+                    $scope.list = $scope.arrBirds;
+                })
+                .error(function () {
+
+                });
+        });
+</script>
+</html>
